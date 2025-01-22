@@ -1,0 +1,16 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "words": [
+    "cpplint",
+    "devskim",
+    "gpios",
+    "maciej",
+    "nucleo",
+    "pinctrl",
+    "printk",
+    "uart",
+    "usart",
+    "zephyrproject"
+  ]
+}
