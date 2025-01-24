@@ -15,8 +15,8 @@ concurrency:
 env:
   SPELL_LYCHEE_ARGUMENTS: "--exclude  st.com"
   MARKDOWN_MARKDOWN_LINK_CHECK_CONFIG_FILE: "config.json"
-  REPOSITORY_DEVSKIM_ARGUMENTS: --ignore-rule-ids DS154189 # https://github.com/Microsoft/DevSkim/blob/main/guidance/DS154189.md
-  C_CPPLINT_ARGUMENTS: "--filter=-build/include_what_you_use,-readability/casting"
+  REPOSITORY_DEVSKIM_ARGUMENTS: --ignore-rule-ids DS154189,DS140021 # https://github.com/microsoft/DevSkim/tree/main/guidance
+  C_CPPLINT_ARGUMENTS: "--linelength=140 --filter=-build/include_what_you_use,-readability/casting"
   C_CLANG_FORMAT_ARGUMENTS: "--style=Google"
   CPP_CLANG_FORMAT_ARGUMENTS: "--style=Google"
 

@@ -11,6 +11,7 @@
 # Allow other text files
 !*.json
 !*.md
+!*.overlay
 !*.py
 !*.txt
 !*.yaml

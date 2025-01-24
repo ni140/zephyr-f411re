@@ -11,12 +11,8 @@
 // I2C:
 // zephyr\samples\boards\st\i2c_timing\src\main.c
 
-// &usart1 {
-//   pinctrl-0 = <&usart1_tx_pb6 &usart1_rx_pb7>;
-//   pinctrl-names = "default";
-//   current-speed = <115200>;
-//   status = "okay";
-// };
+// Modules:
+// https://www.youtube.com/watch?v=NlRM2IfODTs&list=PLEQVp_6G_y4iFfemAbFsKw6tsGABarTwp&index=3
 
 #include <stdio.h>
 #include <string.h>
@@ -26,13 +22,11 @@
 
 #define SLEEP_TIME_MS 100
 
-#define LED0_NODE DT_ALIAS(led0)
-
 // static uint8_t rx_data;
 
 const struct device *uart = DEVICE_DT_GET(DT_NODELABEL(usart1));
 
-static const struct gpio_dt_spec led = GPIO_DT_SPEC_GET(LED0_NODE, gpios);
+static const struct gpio_dt_spec led = GPIO_DT_SPEC_GET(DT_ALIAS(led0), gpios);
 
 char uart_buffer[] = "hello world!\n";
 
